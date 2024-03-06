@@ -1,7 +1,7 @@
 This is a take home task. We will go through the following 4 steps. All of these were done on Ubuntu Linux.
 
 1. How many lines are in this file?
-2. How many “Z” Characters are this file ?
+2. How many “Z” Characters are in this file ?
 3. Find on which line  “Junior”, “Platform” and “Engineer” are on,not case
 sensitive.
 4. Change “Junior” to “Senior”.
