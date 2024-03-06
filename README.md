@@ -89,15 +89,18 @@ The final part is to change junior to senior then give us the line with the new 
 ```
 sed -i 's/Junior/Senior/g' file.txt
     echo " Replacing junior with senior"
-    awk 'tolower($0) ~ /(senior|platform|engineer)/ {print NR, $0}' "$file_name" ```
+    awk 'tolower($0) ~ /(senior|platform|engineer)/ {print NR, $0}' "$file_name" 
+    ```
 
 
 Once your script is written out, run ```chmod +x ``` this will make it executbale.
-To run the script ```./<script_name>.sh``
+To run the script ```./<script_name>.sh```
 
 The output should look like:
 
 ![script](https://github.com/ilknurm/take_home_task/blob/main/images/script.png)
+
+
 
 
 
