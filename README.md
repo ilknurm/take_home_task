@@ -67,13 +67,19 @@ Again running the ```sed --help``` command will give you an output of flags that
 You can also write a bash script to auotmate the whole process so that you are not manullay running any commands. The script can be written in many different ways, depeding on how you choose to craft it.
 
 The first part of the script makes ensures that the file.txt is where it's supposed to be if that conditional is met then  it will continue with wc -l.
+
 ```if [ -e "$file_name" ]; then
     # Count the lines of the file
     line_count=$(wc -l < "$file_name")
-    echo "1. The file $file_name has $line_count lines."```
+    echo "1. The file $file_name has $line_count lines."
+```
+
+
 
 
 The second part is to count the letter Z, both upper and lower case.
+
+
 
 
 ```# Count the total number of 'Z' characters
@@ -94,6 +100,7 @@ sed -i 's/Junior/Senior/g' file.txt
     echo " Replacing junior with senior"
     awk 'tolower($0) ~ /(senior|platform|engineer)/ {print NR, $0}' "$file_name" 
 ```
+
 
 
 Once your script is written out, run ```chmod +x ``` this will make it executbale.
