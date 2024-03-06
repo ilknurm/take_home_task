@@ -6,8 +6,10 @@ This is a take home task. We will go through the following 4 steps. All of these
 sensitive.
 4. Change “Junior” to “Senior”.
 
+The following steps can be done manually by running the commands in the terminal or you can write a bash script and run that. We will also look at the bash script.
+
 1.There are 98 lines in file.txt
-Getting the number of lines can be achieved in multiple ways. 
+Getting the number of lines can be achieved in multiple ways but we'll look at two for now. 
 
 One method is to run a one line command, naviagte to the directory where your file.txt is located and run the following:
 
@@ -60,6 +62,44 @@ The -e option will enable grep to search for each pattern and the -n the option 
 ![Changed](https://github.com/ilknurm/take_home_task/blob/main/images/changed.png)
 
 Again running the ```sed --help``` command will give you an output of flags that can be used with sed.
+
+
+You can also write a bash script to auotmate the whole process so that you are not manullay running any commands. The script can be written in many different ways, depeding on how you choose to craft it.
+
+The first part of the script makes sue that the file.txt is where it's supposed to be if that conditional is met then then it will continue with wc -l.
+```if [ -e "$file_name" ]; then
+    # Count the lines of the file
+    line_count=$(wc -l < "$file_name")
+    echo "1. The file $file_name has $line_count lines."```
+
+The second part is to count the letter Z, both upper and lower
+
+```# Count the total number of 'Z' characters
+    z_count=$(grep -io 'Z' "$file_name" | wc -l)
+    echo "2. Total number of 'Z' characters: $z_count/Z"
+```
+The third part can be done with grep as well, but if you would like to play around with it, I would recommend tyring awk, but you do not have to. You can use grep here as well.
+
+The 'tolower' argument will convert all characters to lowercase oneach line. It then searches for the patterns junior,platform and senior.Once it has those patterns, it will print the number and entire line ($0).
+```
+echo "3. Lines containing 'junior,' 'platform,' and 'engineer':"
+    awk 'tolower($0) ~ /(junior|platform|engineer)/ {print NR, $0}' "$file_name"
+```
+The final part is to change junior to senior then give us the line with the new word 'senior'.
+```
+sed -i 's/Junior/Senior/g' file.txt
+    echo " Replacing junior with senior"
+    awk 'tolower($0) ~ /(senior|platform|engineer)/ {print NR, $0}' "$file_name" ```
+
+
+Once your script is written out, run ```chmod +x ``` this will make it executbale.
+To run the script ```./<script_name>.sh``
+
+The output should look like:
+
+![script](https://github.com/ilknurm/take_home_task/blob/main/images/script.png)
+
+
 
 That is all.
 I hope you enjoyed this tutorial.
