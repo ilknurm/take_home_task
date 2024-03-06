@@ -8,6 +8,7 @@ sensitive.
 
 The following steps can be done manually by running the commands in the terminal or you can write a bash script and run that. We will also look at the bash script.
 
+# Running Commands Manually 
 1.There are 98 lines in file.txt
 Getting the number of lines can be achieved in multiple ways but we'll look at two for now. 
 
