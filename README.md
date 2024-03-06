@@ -41,6 +41,7 @@ This will give you the output 44. There are 44 capital Z's.
 To get the TOTAL number of 'Z' characters. We would need pass the -i flag to make it case insensitive.
 
 ``` grep -oi 'z' file.txt | wc -l ``` 
+There are 98 Z characters (lower and upper case)
 
 ![z_count](https://github.com/ilknurm/take_home_task/blob/main/images/total_Z.png)
 
