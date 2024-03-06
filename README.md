@@ -91,7 +91,7 @@ The second part is to count the letter Z, both upper and lower case.
 ```
 The third part can be done with grep as well, but if you would like to play around with it, I would recommend tyring awk, but you do not have to. You can use grep here as well.
 
-The 'tolower' argument will convert all characters to lowercase on each line. It then searches for the patterns junior,platform and senior.Once it has those patterns, it will print the number and entire line ($0).
+The 'tolower' argument will convert all characters to lowercase on each line. It then searches for the patterns junior,platform and engineer.Once it has those patterns, it will print the number and entire line ($0).
 ```
 echo "3. Lines containing 'junior,' 'platform,' and 'engineer':"
     awk 'tolower($0) ~ /(junior|platform|engineer)/ {print NR, $0}' "$file_name"
