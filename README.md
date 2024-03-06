@@ -66,13 +66,13 @@ Again running the ```sed --help``` command will give you an output of flags that
 
 You can also write a bash script to auotmate the whole process so that you are not manullay running any commands. The script can be written in many different ways, depeding on how you choose to craft it.
 
-The first part of the script makes sue that the file.txt is where it's supposed to be if that conditional is met then then it will continue with wc -l.
+The first part of the script makes ensures that the file.txt is where it's supposed to be if that conditional is met then  it will continue with wc -l.
 ```if [ -e "$file_name" ]; then
     # Count the lines of the file
     line_count=$(wc -l < "$file_name")
     echo "1. The file $file_name has $line_count lines."```
 
-The second part is to count the letter Z, both upper and lower
+The second part is to count the letter Z, both upper and lower case.
 
 ```# Count the total number of 'Z' characters
     z_count=$(grep -io 'Z' "$file_name" | wc -l)
@@ -80,7 +80,7 @@ The second part is to count the letter Z, both upper and lower
 ```
 The third part can be done with grep as well, but if you would like to play around with it, I would recommend tyring awk, but you do not have to. You can use grep here as well.
 
-The 'tolower' argument will convert all characters to lowercase oneach line. It then searches for the patterns junior,platform and senior.Once it has those patterns, it will print the number and entire line ($0).
+The 'tolower' argument will convert all characters to lowercase on each line. It then searches for the patterns junior,platform and senior.Once it has those patterns, it will print the number and entire line ($0).
 ```
 echo "3. Lines containing 'junior,' 'platform,' and 'engineer':"
     awk 'tolower($0) ~ /(junior|platform|engineer)/ {print NR, $0}' "$file_name"
@@ -101,10 +101,6 @@ To run the script ```./<script_name>.sh```
 The output should look like:
 
 ![script](https://github.com/ilknurm/take_home_task/blob/main/images/script.png)
-
-
-
-
 
 That is all.
 I hope you enjoyed this tutorial.
