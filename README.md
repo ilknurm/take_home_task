@@ -2,7 +2,7 @@ This is a take home task. We will go through the following 4 steps. All of these
 
 1. How many lines are in this file?
 2. How many “Z” Characters are in this file ?
-3. Find on which line  “Junior”, “Platform” and “Engineer” are on,not case
+3. On which lines are  “Junior”, “Platform” and “Engineer” located,not case
 sensitive.
 4. Change “Junior” to “Senior”.
 
