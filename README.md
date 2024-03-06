@@ -72,7 +72,9 @@ The first part of the script makes ensures that the file.txt is where it's suppo
     line_count=$(wc -l < "$file_name")
     echo "1. The file $file_name has $line_count lines."```
 
+
 The second part is to count the letter Z, both upper and lower case.
+
 
 ```# Count the total number of 'Z' characters
     z_count=$(grep -io 'Z' "$file_name" | wc -l)
