@@ -63,6 +63,8 @@ The -e option will enable grep to search for each pattern and the -n the option 
 
 Again running the ```sed --help``` command will give you an output of flags that can be used with sed.
 
+# Running a Bash Script
+
 
 You can also write a bash script to auotmate the whole process so that you are not manullay running any commands. The script can be written in many different ways, depeding on how you choose to craft it.
 
