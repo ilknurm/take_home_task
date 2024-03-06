@@ -69,7 +69,7 @@ Again running the ```sed --help``` command will give you an output of flags that
 
 You can also write a bash script to auotmate the whole process so that you are not manullay running any commands. The script can be written in many different ways, it all comes down to personal preference and how you choose to craft it.
 
-The first part of the script makes ensures that the file.txt is where it's supposed to be if that conditional is met then  it will continue with wc -l.
+The first part of the script ensures that the file.txt is where it's supposed to be if that conditional is met then  it will continue with wc -l.
 
 ```if [ -e "$file_name" ]; then
     # Count the lines of the file
