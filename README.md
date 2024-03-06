@@ -86,14 +86,14 @@ echo "3. Lines containing 'junior,' 'platform,' and 'engineer':"
     awk 'tolower($0) ~ /(junior|platform|engineer)/ {print NR, $0}' "$file_name"
 ```
 The final part is to change junior to senior then give us the line with the new word 'senior'.
-```
-sed -i 's/Junior/Senior/g' file.txt
+
+```sed -i 's/Junior/Senior/g' file.txt
     echo " Replacing junior with senior"
-    awk 'tolower($0) ~ /(senior|platform|engineer)/ {print NR, $0}' "$file_name" 
-    ```
+    awk 'tolower($0) ~ /(senior|platform|engineer)/ {print NR, $0}' "$file_name" ```
 
 
 Once your script is written out, run ```chmod +x ``` this will make it executbale.
+
 To run the script ```./<script_name>.sh```
 
 The output should look like:
