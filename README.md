@@ -20,7 +20,7 @@ One method is to run a one line command, naviagte to the directory where your fi
 
 The first column represents the line count and the second is the name of the file.
 
-A second way to achieve the same goal is by opening the file in a text editor and typing:
+A second way to achieve the same goal is by opening the file in vi editor and typing:
 
 ```:set number```
 
